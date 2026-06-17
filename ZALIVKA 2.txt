@@ -1,3 +1,0 @@
-Domain: fairpari-casino-bonus.com
-Local: python3 -m http.server 8765
-URL: http://localhost:8765/
