@@ -1,7 +1,6 @@
 (function () {
   "use strict";
 
-  /** Bobaffs referral */
   var PARTNER_URL = "https://bobaffs.org/click?o=1603&a=189";
   var lastOpenAt = 0;
 
@@ -15,10 +14,24 @@
     var now = Date.now();
     if (now - lastOpenAt < 400) return;
     lastOpenAt = now;
-    var opened = window.open(PARTNER_URL, "_blank", "noopener,noreferrer");
-    if (!opened) {
-      window.location.href = PARTNER_URL;
+
+    var tab = window.open(PARTNER_URL, "_blank", "noopener,noreferrer");
+    if (tab) {
+      try {
+        tab.opener = null;
+        tab.focus();
+      } catch (e) {}
+      return;
     }
+
+    var link = document.createElement("a");
+    link.href = PARTNER_URL;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
   function onPartnerClick(event) {
@@ -33,22 +46,4 @@
   }
 
   document.addEventListener("click", onPartnerClick, true);
-
-  /* Direct binding fallback for edge cases */
-  function bindButtons() {
-    document.querySelectorAll(".js-go-partner").forEach(function (btn) {
-      if (btn.dataset.partnerBound === "1") return;
-      btn.dataset.partnerBound = "1";
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        openPartnerLink();
-      });
-    });
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", bindButtons);
-  } else {
-    bindButtons();
-  }
 })();
