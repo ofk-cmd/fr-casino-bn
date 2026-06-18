@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://fairpari-casino-bonus.com/sitemaps/pages.xml</loc>
-    <lastmod>2026-06-10</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://fairpari-casino-bonus.com/sitemaps/images.xml</loc>
-    <lastmod>2026-06-10</lastmod>
-  </sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://fairpari-casino-bonus.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://fairpari-casino-bonus.com/cookie-siyosati.html</loc><priority>0.5</priority></url>
+  <url><loc>https://fairpari-casino-bonus.com/foydalanish-shartlari.html</loc><priority>0.5</priority></url>
+  <url><loc>https://fairpari-casino-bonus.com/masuliyatli-oyin.html</loc><priority>0.5</priority></url>
+  <url><loc>https://fairpari-casino-bonus.com/maxfiylik-siyosati.html</loc><priority>0.5</priority></url>
+  <url><loc>https://fairpari-casino-bonus.com/ru/</loc><priority>1.0</priority></url>
+  <url><loc>https://fairpari-casino-bonus.com/ru/otvetstvennaya-igra.html</loc><priority>0.5</priority></url>
+  <url><loc>https://fairpari-casino-bonus.com/ru/politika-cookie.html</loc><priority>0.5</priority></url>
+  <url><loc>https://fairpari-casino-bonus.com/ru/politika-konfidentsialnosti.html</loc><priority>0.5</priority></url>
+  <url><loc>https://fairpari-casino-bonus.com/ru/usloviya-ispolzovaniya.html</loc><priority>0.5</priority></url>
+</urlset>
