@@ -379,6 +379,10 @@ def patch_file(path: Path, lang: str):
 def main():
     patch_file(SITE / 'index.html', 'uz')
     patch_file(SITE / 'ru' / 'index.html', 'ru')
+    import sys
+    sys.path.insert(0, str(SITE / 'scripts'))
+    import sync_ru_translation
+    sync_ru_translation.main()
 
 
 if __name__ == '__main__':
